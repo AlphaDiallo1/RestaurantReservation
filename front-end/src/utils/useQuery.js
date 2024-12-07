@@ -14,3 +14,11 @@ function useQuery() {
 }
 
 export default useQuery;
+
+
+/*
+More info on this (ZW):
+
+https://v5.reactrouter.com/web/example/query-parameters
+
+*/

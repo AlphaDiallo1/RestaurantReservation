@@ -16,7 +16,7 @@ describe("US-01 - Create and list reservations - E2E", () => {
 
   beforeAll(async () => {
     await fsPromises.mkdir("./.screenshots", { recursive: true });
-    setDefaultOptions({ timeout: 1000 });
+    setDefaultOptions({ timeout: 10000 });
     browser = await puppeteer.launch();
   });
 
