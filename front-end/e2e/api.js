@@ -79,7 +79,7 @@ async function createTable(table, signal) {
 }
 
 async function seatReservation(reservation_id, table_id) {
-  const url = `${API_BASE_URL}/tables/${table_id}/seat`;
+  const url = `${API_BASE_URL}/reservations/${table_id}/seat`;
   const options = {
     method: "PUT",
     body: JSON.stringify({ data: { reservation_id } }),
