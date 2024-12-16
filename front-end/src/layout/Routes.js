@@ -32,15 +32,14 @@ function Routes() {
 
   // If a date is found in the query, set date to the found query date, else set date to current date using today() function.
   useEffect(() => {
-    const queryDate = query.get("date");
-    if (queryDate) {
-      setDate(queryDate);
-    } else if (location.pathname === "/dashboard") {
-      history.push(`/dashboard?date=${today()}`);
-      setDate(today());
+    setDate("");
+    if (query.get("date")) {
+      setDate(query.get("date"));
+    } else {
+      if (location.pathname === "/dashboard")
+        history.push(`/dashboard?date=${today()}`);
     }
   }, [query, location.pathname, history]);
-  
  
   
   // Use useEffect hook to call loadDashboard function whenever date changes.
